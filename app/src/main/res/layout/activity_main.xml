@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#838383"
+        android:contentDescription="Design Line"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.489"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-4dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#838383"
+        android:contentDescription="Design Line"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#838383"
+        android:contentDescription="Design Line"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-4dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#838383"
+        android:contentDescription="Design Line"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.521"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-28dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#838383"
+        android:contentDescription="Design Line"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-4dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#838383"
+        android:contentDescription="Design Line"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#838383"
+        android:contentDescription="Design Line"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.924"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="162dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="248dp"
+        android:fontFamily="serif"
+        android:text="Kochevnik"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="308dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="телефон доставки"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="+7 (902) 565-36-77"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="412dp"
+        android:layout_height="52dp"
+        android:background="#008A5656"
+        android:backgroundTint="#00F1ECEC"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="ЗАБРОНИРОВАТЬ СТОЛ"
+        android:textColor="#0E0000"
+        android:textSize="20sp"
+        app:iconTint="#FDFCFC"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="412dp"
+        android:layout_height="52dp"
+        android:background="#008A5656"
+        android:backgroundTint="#00F1ECEC"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="ЗАКАЗАТЬ ЕДУ"
+        android:textColor="#0E0000"
+        android:textSize="20sp"
+        app:iconTint="#FDFCFC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.562"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="256dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="Кафе &quot;Кочевник&quot; - непревзойденное обещание максимального качества по привлекательным ценам"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="409dp"
+        android:layout_height="51dp"
+        android:fontFamily="@font/montserrat_thin"
+        android:gravity="center_horizontal"
+        android:text="Адрес:  Республика Алтай, с. Усть-Муны, Майминский район, Светлый переулок, 2 "
+        android:textColor="#0E0E0E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.983"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
