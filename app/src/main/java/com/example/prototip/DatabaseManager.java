@@ -28,6 +28,8 @@ public class DatabaseManager {
         database.insert("tables", null, values);
     }
 
+
+
     // Метод для добавления доступного столика
     public void addAvailableTable(int tableId, String dateTime) {
         ContentValues values = new ContentValues();
@@ -55,8 +57,32 @@ public class DatabaseManager {
         database.insert("reservations", null, values);
     }
 
+    // Метод для добавления столика в таблицу "Блюда"
+    public void addDishes(int dishesId, String name_dishes, double price_dishes) {
+        ContentValues values = new ContentValues();
+        values.put("dishes_id", dishesId);
+        values.put("name_dishes", name_dishes);
+        values.put("price_dishes", price_dishes);
+        database.insert("dishes", null, values);
+    }
+
+    // Метод для добавления бронирования блюд
+    public void addReservation(int orderId, String ordersCode, String orderTime, String orderPhone) {
+        ContentValues values = new ContentValues();
+        values.put("order_id", orderId);
+        values.put("order_code", ordersCode);
+        values.put("order_date", orderTime);
+        values.put("order_phone", orderPhone);
+        database.insert("orders", null, values);
+    }
+
     public Cursor getTables() {
         String query = "SELECT * FROM " + DatabaseHelper.TABLE_TABLES_NAME;
+        return database.rawQuery(query, null);
+    }
+
+    public Cursor getDishes() {
+        String query = "SELECT * FROM " + DatabaseHelper.TABLE_DISHES;
         return database.rawQuery(query, null);
     }
 
@@ -66,6 +92,12 @@ public class DatabaseManager {
         addTable(2, 6, 15.0);
         addTable(3, 2, 8.0);
     }
+
+    public void addDishesData() {
+        addDishes(1, "Буузы", 75.0);
+
+    }
+
 
     // Метод для добавления данных в таблицу "Доступные столики"
     public void addAvailableTablesData() {

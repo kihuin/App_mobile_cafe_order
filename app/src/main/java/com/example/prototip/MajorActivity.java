@@ -3,6 +3,7 @@ package com.example.prototip;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.AdapterView;
@@ -41,11 +42,10 @@ public class MajorActivity extends AppCompatActivity {
             Table selectedTable = tableList.get(position);
             int selectedTableId = selectedTable.getId();
 
-            // Передача ID выбранного столика на другую страницу для создания заказа (реализация этой логики зависит от вашего приложения)
-            // Здесь вы можете использовать Intent для передачи данных на другую активность
-            // Intent intent = new Intent(MainActivity.this, OrderActivity.class);
-            // intent.putExtra("selectedTableId", selectedTableId);
-            // startActivity(intent);
+            // Передача ID выбранного столика на другую страницу для создания заказа
+            Intent intent = new Intent(MajorActivity.this, BronActivity.class);
+            intent.putExtra("selectedTableId", selectedTableId);
+            startActivity(intent);
             Toast.makeText(MajorActivity.this, "Вы выбрали столик с ID: " + selectedTableId, Toast.LENGTH_SHORT).show();
         });
 

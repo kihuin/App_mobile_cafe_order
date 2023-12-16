@@ -40,6 +40,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String RESERVATIONS_COLUMN_CUSTOMER_NAME = "customer_name";
     public static final String RESERVATIONS_COLUMN_CUSTOMER_NUMBER = "customer_number";
 
+    // Таблица "Блюдо"
+    public static final String TABLE_DISHES = "dishes";
+    public static final String DISHES_COLUMN_ID = "dishes_id";
+    public static final String DISHES_COLUMN_NAME = "name_dishes";
+    public static final String DISHES_COLUMN_PRICE = "price_dishes";
+
+
+    // Таблица "Заказ"
+    public static final String TABLE_ORDERS = "orders";
+    public static final String ORDERS_COLUMN_ID = "orders_id";
+    public static final String RESERVATIONS_COLUMN_ORDER_CODES = "order_code";
+    public static final String ORDERS_COLUMN_DATE = "order_date";
+    public static final String ORDERS_COLUMN_PHONE = "order_phone";
+
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -74,11 +88,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 RESERVATIONS_COLUMN_CUSTOMER_NAME + " TEXT, " +
                 RESERVATIONS_COLUMN_CUSTOMER_NUMBER + " TEXT)";
 
+
+        String createDishesTable = "CREATE TABLE " + TABLE_DISHES + " (" +
+                DISHES_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                DISHES_COLUMN_NAME + " TEXT, " +
+                DISHES_COLUMN_PRICE + " REAL)";
+
+        // Создание таблицы "Заказ"
+        String createOrdersTable = "CREATE TABLE " + TABLE_ORDERS + " (" +
+                ORDERS_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                RESERVATIONS_COLUMN_ORDER_CODES + " TEXT, " +
+                ORDERS_COLUMN_DATE + " TEXT, " +
+                ORDERS_COLUMN_PHONE + " TEXT)";
+
         // Выполнение создания таблиц
         db.execSQL(createTablesTable);
         db.execSQL(createAvailableTablesTable);
         db.execSQL(createBlockedTablesTable);
         db.execSQL(createReservationsTable);
+        db.execSQL(createDishesTable);
+        db.execSQL(createOrdersTable);
 
 
     }

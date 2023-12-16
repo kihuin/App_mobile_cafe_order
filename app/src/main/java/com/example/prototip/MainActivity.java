@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         dbManager.addAvailableTablesData();
         dbManager.addBlockedTablesData();
         dbManager.addReservationsData();
+        dbManager.addDishesData();
+
 
         dbManager.close();
 
